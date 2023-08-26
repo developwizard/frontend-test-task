@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CommonModule, UpperCasePipe} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 
@@ -25,9 +25,9 @@ export class AppCardComponent implements OnInit {
   blockCountText: string = '';
   @Input()
   selected: boolean = false;
+  @Output() selectionChanges = new EventEmitter<boolean>();
 
   ngOnInit(): void {
-    console.log(this.title);
     this.setBlockCountText(this.blocksCount);
   }
 
@@ -35,5 +35,10 @@ export class AppCardComponent implements OnInit {
       this.blockCountText = blockCount == 1
         ? blockCount + ' block'
         : blockCount + ' blocks';
+  }
+
+  onSelectionChanges(selected: boolean) {
+    this.selected = selected;
+    this.selectionChanges.emit(selected);
   }
 }

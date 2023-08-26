@@ -2,6 +2,7 @@
   display: flex;
   background-color: #1C1C33;
   border-radius: 8px;
+  width: inherit;
 }
 
 .cube {
@@ -65,8 +66,9 @@
 
 .mdc-button.mat-primary,
 .mat-mdc-stroked-button.mat-primary {
-  width: 137px;
+  width: 147px;
   height: 32px;
+  font-weight: 400;
   color: #6E42CA;
   font-size: 13px;
   line-height: 20px;

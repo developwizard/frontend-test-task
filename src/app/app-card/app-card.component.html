@@ -9,7 +9,12 @@
   </div>
   <div class="button-container">
     <button mat-stroked-button color="primary">Details</button>
-    <div *ngIf="!selected; else elseBlock"><button mat-stroked-button color="primary">Mark as Suitable</button></div>
-    <ng-template #elseBlock><button mat-stroked-button color="primary" class="selected">Skip Selection</button></ng-template>
+    <div *ngIf="!selected; else elseBlock">
+      <button mat-stroked-button color="primary" (click)="onSelectionChanges(true)">Mark as Suitable</button>
+    </div>
+    <ng-template #elseBlock>
+      <button mat-stroked-button color="primary" class="selected" (click)="onSelectionChanges(false)">Skip Selection
+      </button>
+    </ng-template>
   </div>
 </div>
