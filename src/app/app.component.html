@@ -1,11 +1,24 @@
-<mat-list>
-  <mat-list-item>
-    <app-card [id]="'79d62695-83f9-4788-9b64-f6503c3c7cc4'" [blocksCount]="1" [description]="'Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.'" [title]="'Awesome Concrete Tuna'"></app-card>
-  </mat-list-item>
-  <mat-list-item>
-    <app-card [id]="'79d62695-83f9-4788-9b64-f6503c3c7cc4'" [blocksCount]="1" [description]="'Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.'" [title]="'Awesome Concrete Tuna'"></app-card>
-  </mat-list-item>
-  <mat-list-item>
-    <app-card [id]="'79d62695-83f9-4788-9b64-f6503c3c7cc4'" [blocksCount]="1" [description]="'Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.Qui repudiandae quasi fuga sit id ut excepturi rerum non.'" [title]="'Awesome Concrete Tuna'"></app-card>
-  </mat-list-item>
-</mat-list>
+<input type="search" [(ngModel)]="searchDescription">
+<div class="button-container">
+  <button mat-stroked-button color="primary" (click)="searchOnlySelected = false">All</button>
+  <button mat-stroked-button color="primary" (click)="searchOnlySelected = true">Selected</button>
+</div>
+
+<div class="cards">
+  <div class="not-found" *ngIf="(data | filter:searchDescription : searchOnlySelected).length < 1; else elseBlock">
+    Not Found
+  </div>
+  <ng-template #elseBlock>
+    <cdk-virtual-scroll-viewport [itemSize]="18 * 7" class="example-viewport">
+      <app-card *cdkVirtualFor="let d of (data | filter: searchDescription : searchOnlySelected);"
+                [id]="d.id"
+                [blocksCount]="d.blocksCount"
+                [description]="d.description"
+                [selected]="d?.selected"
+                [title]="d.title"
+                (selectionChanges)="d.selected = $event"
+      ></app-card>
+    </cdk-virtual-scroll-viewport>
+  </ng-template>
+</div>
+

@@ -1,14 +1,24 @@
-app-card {
-  color: #E5E4FA;
-}
-
-mat-list {
+.cards {
   display: flex;
   flex-direction: column;
 }
 
-mat-list mat-list-item {
+.example-viewport {
+  height: 600px;
+  border: 1px solid black;
+}
+
+app-card {
+  color: #E5E4FA;
   width: 672px;
   height: 167px;
   align-self: center;
+}
+
+.not-found {
+  color: #E5E4FA;
+  width: 672px;
+  height: 167px;
+  align-self: center;
+  text-align: center;
 }
