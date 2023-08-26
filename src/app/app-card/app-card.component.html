@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="cube">
+    <div class="cube-icon"></div>
+    <p class="block-count">{{blockCountText | uppercase}}</p>
+  </div>
+  <div class="text">
+    <p class="title">{{title}}</p>
+    <p class="description">{{description}}</p>
+  </div>
+  <div class="button-container">
+    <button mat-stroked-button color="primary">Details</button>
+    <div *ngIf="!selected; else elseBlock"><button mat-stroked-button color="primary">Mark as Suitable</button></div>
+    <ng-template #elseBlock><button mat-stroked-button color="primary" class="selected">Skip Selection</button></ng-template>
+  </div>
+</div>

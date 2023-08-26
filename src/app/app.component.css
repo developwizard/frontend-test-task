@@ -1,0 +1,14 @@
+app-card {
+  color: #E5E4FA;
+}
+
+mat-list {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-list mat-list-item {
+  width: 672px;
+  height: 167px;
+  align-self: center;
+}
