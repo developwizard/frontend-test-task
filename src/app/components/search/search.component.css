@@ -51,6 +51,7 @@
 .search-mat-form-field .mdc-notched-outline__notch,
 .search-mat-form-field .mdc-notched-outline__trailing {
   border-radius: 0 !important;
+  border: 0;
   border-color: transparent !important;
 }
 

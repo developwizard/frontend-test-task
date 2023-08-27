@@ -1,0 +1,28 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  /*height except header and search element*/
+  height: calc(100vh - 185px);
+}
+
+.cards-viewport {
+  height: 100%;
+}
+.cards cdk-virtual-scroll-viewport .cdk-virtual-scroll-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+app-card {
+  width: 640px;
+  height: 167px;
+  align-self: center;
+}
+
+.not-found {
+  width: 672px;
+  height: 167px;
+  align-self: center;
+  text-align: center;
+}

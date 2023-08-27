@@ -1,0 +1,17 @@
+<div class="cards">
+  <div class="not-found" *ngIf="(data | filter:searchDescription : searchOnlySelected).length < 1; else elseBlock">
+    Not Found
+  </div>
+  <ng-template #elseBlock>
+    <cdk-virtual-scroll-viewport [itemSize]="18 * 7" class="cards-viewport">
+      <app-card *cdkVirtualFor="let d of (data | filter: searchDescription : searchOnlySelected);"
+                [id]="d.id"
+                [blocksCount]="d.blocksCount"
+                [description]="d.description"
+                [selected]="d?.selected"
+                [title]="d.title"
+                (selectionChanges)="d.selected = $event"
+      ></app-card>
+    </cdk-virtual-scroll-viewport>
+  </ng-template>
+</div>
