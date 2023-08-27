@@ -6,7 +6,7 @@ import {AppCardComponent} from './app-card/app-card.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
-import {FilterPipe} from "./pipes/filter.pipe";
+import {FilterPipe} from "../pipes/filter.pipe";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ScrollingModule} from "@angular/cdk/scrolling";
