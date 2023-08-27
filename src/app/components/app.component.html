@@ -1,10 +1,5 @@
 <app-header></app-header>
-<input type="search" [(ngModel)]="searchDescription" (ngModelChange)="onSearchChange()">
-<mat-button-toggle-group class="selected-toggle-group" [(ngModel)]="searchOnlySelected" aria-label="Selected">
-  <mat-button-toggle class="selected-toggle-button" [value]="false">All</mat-button-toggle>
-  <mat-button-toggle class="selected-toggle-button" [value]="true">Selected</mat-button-toggle>
-</mat-button-toggle-group>
-
+<app-search></app-search>
 <div class="cards">
   <div class="not-found" *ngIf="(data | filter:searchDescription : searchOnlySelected).length < 1; else elseBlock">
     Not Found

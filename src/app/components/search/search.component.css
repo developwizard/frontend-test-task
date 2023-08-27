@@ -1,0 +1,93 @@
+.search-container {
+  display: flex;
+  flex-direction: column;
+  width: 640px;
+  margin: auto;
+}
+
+/*
+  Search mat input
+*/
+.search-mat-form-field mat-icon {
+  color: #D4C4ED;
+  font-size: 22px !important;
+  opacity: 0.6;
+}
+
+.search-mat-form-field input {
+  font-size: 13px !important;
+  opacity: 0.6;
+}
+
+.search-mat-form-field .mat-mdc-form-field-flex {
+  height: 48px;
+}
+
+.search-mat-form-field .mdc-text-field--outlined .mat-mdc-form-field-infix {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.search-mat-form-field .mat-mdc-form-field-flex,
+.search-mat-form-field .mat-mdc-text-field-wrapper {
+  background-color: #1C1C33 !important;
+  border-radius: 4px !important;
+}
+
+.search-mat-form-field .mdc-text-field__input {
+  color: #E5E4FA !important;
+  caret-color: #E5E4FA !important;
+}
+
+.search-mat-form-field .mat-mdc-input-element::placeholder {
+  color: #E5E4FA !important;
+}
+
+.search-mat-form-field .mdc-text-field__input:focus {
+  outline: none !important;
+}
+
+.search-mat-form-field .mdc-notched-outline__leading,
+.search-mat-form-field .mdc-notched-outline__notch,
+.search-mat-form-field .mdc-notched-outline__trailing {
+  border-radius: 0 !important;
+  border-color: transparent !important;
+}
+
+.search-mat-form-field .mat-mdc-form-field-subscript-wrapper {
+  height: 0 !important;
+}
+
+/*
+  Search mat toggle buttons
+*/
+.selected-toggle-group.mat-button-toggle-group {
+  display: flex;
+  margin: 9px 0 16px 0;
+  border: 0;
+}
+
+.selected-toggle-group.mat-button-toggle-group-appearance-standard .mat-button-toggle-appearance-standard + .mat-button-toggle-appearance-standard {
+  border: 0;
+}
+
+.selected-toggle-group .mat-button-toggle {
+  background-color: #1C1C33 !important;
+  color: #E5E4FA !important;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  text-align: center;
+  opacity: 0.6;
+  height: 24px;
+  border: 0;
+  margin-right: 8px;
+  border-radius: 50px;
+  padding: 0 21px;
+}
+
+.selected-toggle-group .mat-button-toggle-checked {
+  color: #FFF !important;
+  background-color: #1C1C33 !important;
+  opacity: 1;
+}

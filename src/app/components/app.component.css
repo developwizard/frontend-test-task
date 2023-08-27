@@ -20,30 +20,3 @@ app-card {
   align-self: center;
   text-align: center;
 }
-
-.selected-toggle-group {
-  display: flex;
-  margin: 16px 0;
-  border: 0;
-}
-
-.selected-toggle-group .mat-button-toggle {
-  background-color: #1C1C33 !important;
-  color: #E5E4FA !important;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.25px;
-  text-align: center;
-  opacity: 0.6;
-  height: 24px;
-  border: 0;
-  margin-right: 8px;
-  border-radius: 50px;
-  padding: 0 21px;
-}
-
-.selected-toggle-group .mat-button-toggle-checked {
-  color: #FFF !important;
-  background-color: #1C1C33 !important;
-  opacity: 1;
-}
