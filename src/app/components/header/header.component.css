@@ -1,0 +1,15 @@
+.header {
+  height: 88px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 17.58px;
+  letter-spacing: 0.44px;
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.header p {
+  margin: auto 50px;
+  opacity: 0.6;
+}

@@ -11,6 +11,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ScrollingModule} from "@angular/cdk/scrolling";
 import {AppRoutingModule} from "./app-routing.module";
+import {HeaderComponent} from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +24,9 @@ import {AppRoutingModule} from "./app-routing.module";
     BrowserModule,
     FormsModule,
     FilterPipe,
-    HttpClientModule,
+    HeaderComponent,
     MatButtonModule,
+    HttpClientModule,
     MatListModule,
     ScrollingModule
   ],
