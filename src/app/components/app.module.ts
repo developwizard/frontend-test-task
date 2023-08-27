@@ -7,11 +7,12 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatListModule} from "@angular/material/list";
 import {MatButtonModule} from "@angular/material/button";
 import {FilterPipe} from "../pipes/filter.pipe";
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ScrollingModule} from "@angular/cdk/scrolling";
 import {AppRoutingModule} from "./app-routing.module";
 import {HeaderComponent} from './header/header.component';
+import {MatButtonToggleModule} from "@angular/material/button-toggle";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,9 @@ import {HeaderComponent} from './header/header.component';
     MatButtonModule,
     HttpClientModule,
     MatListModule,
-    ScrollingModule
+    ScrollingModule,
+    MatButtonToggleModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
