@@ -10,6 +10,7 @@ import {FilterPipe} from "../pipes/filter.pipe";
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ScrollingModule} from "@angular/cdk/scrolling";
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {ScrollingModule} from "@angular/cdk/scrolling";
   ],
   imports: [
     AppCardComponent,
+    AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,

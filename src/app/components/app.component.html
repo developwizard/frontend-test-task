@@ -1,4 +1,4 @@
-<input type="search" [(ngModel)]="searchDescription">
+<input type="search" [(ngModel)]="searchDescription" (ngModelChange)="onSearchChange()">
 <div class="button-container">
   <button mat-stroked-button color="primary" (click)="searchOnlySelected = false">All</button>
   <button mat-stroked-button color="primary" (click)="searchOnlySelected = true">Selected</button>
