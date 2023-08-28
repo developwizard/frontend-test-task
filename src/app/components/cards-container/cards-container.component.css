@@ -22,7 +22,7 @@
 }
 
 app-card {
-  width: 640px;
+  max-width: 640px;
   height: 167px;
   align-self: center;
   display: block;
@@ -30,8 +30,16 @@ app-card {
 }
 
 .not-found {
-  width: 672px;
+  max-width: 672px;
   height: 167px;
   align-self: center;
   text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  app-card {
+    max-width: 100%;
+    height: 128px;
+    margin: 16px;
+  }
 }

@@ -1,7 +1,7 @@
 .search-container {
   display: flex;
   flex-direction: column;
-  width: 640px;
+  max-width: 640px;
   margin: auto;
 }
 
@@ -91,4 +91,11 @@
   color: #FFF !important;
   background-color: #1C1C33 !important;
   opacity: 1;
+}
+
+@media only screen and (max-width: 768px) {
+  .search-container {
+    max-width: 100%;
+    margin: 0 16px;
+  }
 }
