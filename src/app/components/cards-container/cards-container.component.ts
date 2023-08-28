@@ -1,10 +1,11 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ScrollingModule} from "@angular/cdk/scrolling";
 import {DataService, TestData} from "../../services/data.service";
 import {SearchService} from "../../services/search.service";
 import {FilterPipe} from "../../pipes/filter.pipe";
 import {AppCardComponent} from "../app-card/app-card.component";
 import {CommonModule} from "@angular/common";
+import {NgScrollbarModule} from "ngx-scrollbar";
 
 @Component({
   selector: 'app-cards-container',
@@ -15,9 +16,9 @@ import {CommonModule} from "@angular/common";
     AppCardComponent,
     CommonModule,
     FilterPipe,
+    NgScrollbarModule,
     ScrollingModule
-  ],
-  encapsulation: ViewEncapsulation.None
+  ]
 })
 export class CardsContainerComponent implements OnInit {
   searchDescription: string = '';
@@ -27,6 +28,7 @@ export class CardsContainerComponent implements OnInit {
   constructor(private dataService: DataService,
               private searchService: SearchService) {
   }
+
   ngOnInit(): void {
     this.searchService.getSearchValue().subscribe((inputVal: string) => {
       this.searchDescription = inputVal;

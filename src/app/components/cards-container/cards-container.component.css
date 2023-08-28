@@ -8,16 +8,25 @@
 .cards-viewport {
   height: 100%;
 }
-.cards cdk-virtual-scroll-viewport .cdk-virtual-scroll-content-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+.custom-scrollbar {
+  --scrollbar-border-radius: 7px;
+  --scrollbar-padding: 4px;
+  --scrollbar-viewport-margin: 0;
+  --scrollbar-track-color: rgba(0, 0, 0, 0.25) !important;
+  --scrollbar-wrapper-color: transparent !important;
+  --scrollbar-thumb-color: rgb(0, 0, 0) !important;
+  --scrollbar-thumb-hover-color: rgba(255, 255, 255, 0.1) !important;
+  --scrollbar-size: 5px;
+  --scrollbar-hover-size: var(--scrollbar-size);
 }
 
 app-card {
   width: 640px;
   height: 167px;
   align-self: center;
+  display: block;
+  margin: 0 auto;
 }
 
 .not-found {
