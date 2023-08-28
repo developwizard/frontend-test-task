@@ -7,6 +7,9 @@ import {AppCardComponent} from "../app-card/app-card.component";
 import {CommonModule} from "@angular/common";
 import {NgScrollbarModule} from "ngx-scrollbar";
 
+/**
+ * This component displays cards inside container
+ */
 @Component({
   selector: 'app-cards-container',
   templateUrl: './cards-container.component.html',

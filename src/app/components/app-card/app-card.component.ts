@@ -2,6 +2,9 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {CommonModule, UpperCasePipe} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 
+/**
+ * This component displays card with icon, title and description
+ */
 @Component({
   selector: 'app-card',
   templateUrl: './app-card.component.html',

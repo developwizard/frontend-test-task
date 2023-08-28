@@ -7,6 +7,9 @@ import {CommonModule, Location} from "@angular/common";
 import {SearchService} from "../../services/search.service";
 import {MatIconModule} from "@angular/material/icon";
 
+/**
+ * This component displays search input with filter buttons
+ */
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -51,6 +54,9 @@ export class SearchComponent implements OnInit {
     this.onSearchChange();
   }
 
+  /**
+   * Changes the search value in queryParams
+   */
   onSearchChange() {
     if (this.searchDescription == '') {
       const url = this.router.createUrlTree([], {
