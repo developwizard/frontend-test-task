@@ -1,6 +1,8 @@
 <div class="container">
   <div class="cube">
-    <div class="cube-icon"></div>
+    <div *ngIf="blockIconSrc != ''" class="cube-icon">
+      <img [src]="blockIconSrc" alt="block-icon" />
+    </div>
     <p class="block-count">{{blockCountText | uppercase}}</p>
   </div>
   <div class="text">
