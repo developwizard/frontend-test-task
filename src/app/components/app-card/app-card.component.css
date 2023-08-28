@@ -3,6 +3,7 @@
   background-color: #1C1C33;
   border-radius: 8px;
   width: inherit;
+  justify-content: space-between;
 }
 
 .cube {
@@ -35,6 +36,7 @@
   display: flex;
   flex-direction: column;
   max-width: 342px;
+  width: 100%;
 }
 
 .title {
@@ -52,6 +54,7 @@
   overflow:hidden;
   text-overflow: ellipsis;
   flex: 1;
+  max-height: 60px;
 }
 
 .button-container {
